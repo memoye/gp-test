@@ -21,7 +21,7 @@ export const TodoItemCard = ({
   return (
     <CardContainer
       border={false}
-      className={`space-y-12 rounded-lg ${
+      className={`space-y-6 rounded-lg ${
         color === "red" ? "bg-muted" : "bg-[#E1F5FD]"
       }`}
     >

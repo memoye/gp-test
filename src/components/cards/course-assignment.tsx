@@ -4,7 +4,7 @@ export default function CourseAssignment() {
   return (
     <div
       className="bg-card p-6 space-y-1.5
-text-white drop-shadow-custom rounded-lg"
+text-white drop-shadow-custom rounded-lg h-full flex flex-col justify-between"
     >
       <div className="flex flex-col-reverse">
         <div>

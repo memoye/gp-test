@@ -1,11 +1,20 @@
 /** @type {import('tailwindcss').Config} */
+
+import * as defaultTheme from "tailwindcss/defaultTheme";
+
 export default {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
     "node_modules/preline/dist/*.js",
   ],
+
   theme: {
+    screens: {
+      xs: "386px",
+      lgr: "1300px",
+      ...defaultTheme.screens,
+    },
     extend: {
       fontFamily: {
         sans: ["Roboto", "sans-serif"],

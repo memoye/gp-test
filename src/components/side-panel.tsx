@@ -11,7 +11,6 @@ export function SidePanel({
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }) {
   function close() {
-    console.log("close");
     setOpen(false);
   }
 

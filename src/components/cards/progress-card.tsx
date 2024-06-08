@@ -11,7 +11,7 @@ export const ProgressCard = () => {
           <ChevronRight className="text-card size-4 " />
         </button>
       }
-      className="space-y-4"
+      className="space-y-4 h-full"
     >
       <h2 className="font-medium mb-6 text-foreground/90">Overall progress</h2>
 
@@ -21,8 +21,8 @@ export const ProgressCard = () => {
             German for beginners
           </h3>
 
-          <div className="size-8 flex items-center justify-center p-2 rounded-full shadow-md shadow-foreground-lighter/15">
-            <img src="/images/flag-gm.png" />
+          <div className="size-14 flex items-center justify-center p-2 rounded-full shadow-md shadow-foreground-lighter/15">
+            <img src="/images/flag-gm.png" className="w-2/3 mt-px min-w-6" />
           </div>
         </div>
 

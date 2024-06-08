@@ -18,8 +18,8 @@ export const UserProfile = ({
 }) => {
   return (
     <div
-      className={`min-h-svh relative bg-muted lg:bg-white z-40 top-0 py-4 max-lg:transition-all max-mw-full md:min-w-[20rem] flex flex-col justify-between ${"max-lg:fixed max-top-0"} ${
-        open ? "max-lg:right-0" : "max-lg:-right-full"
+      className={`min-h-svh max-xs:w-full relative bg-muted lg:bg-muted z-[50] top-0 py-4 max-lgr:transition-all max-mw-full md:min-w-[20rem] flex flex-col justify-between ${"max-lgr:fixed max-top-0"} ${
+        open ? "max-lgr:right-0" : "max-lgr:-right-full"
       }`}
     >
       {/* back button for mobile and tablet */}
