@@ -1,19 +1,25 @@
 import { ChevronsDownUpIcon, ChevronsUpDownIcon, LogOut } from 'lucide-react';
 import { CardContainer } from '../common/card-container';
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
+import useAuth from '../../hooks/useAuth';
+import toast from 'react-hot-toast';
 
 export const ProfileSelectCard = () => {
   const [showOptions, setShowOptions] = useState(false);
-  const navigate = useNavigate();
+  const { logout: signOut } = useAuth();
 
   function toggleShowOptions() {
     setShowOptions((prev) => !prev);
   }
 
-  const logout = () => {
-    navigate('/login');
-  };
+  async function logout() {
+    await toast.promise(signOut(), {
+      loading: 'Logging out...',
+      success: 'Logged out successfully',
+      error: 'Failed to log out',
+    });
+  }
 
   return (
     <section className="relative flex cursor-pointer items-center justify-between gap-2 rounded-md p-4">

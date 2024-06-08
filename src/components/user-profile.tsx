@@ -58,7 +58,7 @@ export const UserProfile = ({
           </h3>
           <div className="space-y-2">
             <UserProgressCard
-              progress={78}
+              progress={63}
               icon={PenIcon}
               color="hsl(var(--color-primary-lighter))"
               title="Grammar"
@@ -74,7 +74,7 @@ export const UserProfile = ({
             />
 
             <UserProgressCard
-              progress={78}
+              progress={34}
               icon={BookAIcon}
               color="#EA4C89"
               title="Reading"

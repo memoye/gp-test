@@ -17,7 +17,7 @@ export const InAppLayout = () => {
   const [sidePanelOpen, setSidePanelOpen] = useState(false);
   const [profileOpen, setProfileOpen] = useState(false);
 
-  const {isAuthenticated} = useAuth()
+  const { isAuthenticated } = useAuth();
 
   function handleSidePanel(action?: 'open' | 'close') {
     switch (action) {
@@ -47,7 +47,7 @@ export const InAppLayout = () => {
     }
   }
 
-  if (!isAuthenticated) return <Navigate to="/login"/>
+  if (!isAuthenticated) return <Navigate to="/login" />;
 
   return (
     <div className="md:flex">
