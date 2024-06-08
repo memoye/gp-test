@@ -24,7 +24,7 @@ const Dashboard = () => {
           <div className="col-span-2">
             <CourseAssignment />
           </div>
-          <div className="min-w-max max-xs:col-span-2">
+          <div className="_max-xs:col-span-2 min-w-max">
             <TodoItemCard
               color="red"
               title="Homework"
@@ -34,7 +34,7 @@ const Dashboard = () => {
             />
           </div>
 
-          <div className="min-w-max max-xs:col-span-2">
+          <div className="_max-xs:col-span-2 min-w-max">
             <TodoItemCard
               color="blue"
               title="Reading"
