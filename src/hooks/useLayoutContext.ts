@@ -1,8 +1,8 @@
 import { useOutletContext } from "react-router-dom";
-import { LayoutContextType } from "../components/layout";
+import { type InAppLayoutContextType } from "../components/layouts/in-app-layout";
 
 export const useLayoutContext = () => {
-  const layoutcontext = useOutletContext<LayoutContextType>();
+  const layoutcontext = useOutletContext<InAppLayoutContextType>();
 
   return layoutcontext;
 };

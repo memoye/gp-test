@@ -1,17 +1,18 @@
 import { useState } from "react";
-import { SidePanel } from "./side-panel";
-import { Outlet } from "react-router-dom";
-import { UserProfile } from "./user-profile";
 import { MenuIcon, SearchIcon } from "lucide-react";
 
-export type LayoutContextType = {
+import { SidePanel } from "../side-panel";
+import { Outlet } from "react-router-dom";
+import { UserProfile } from "../user-profile";
+
+export type InAppLayoutContextType = {
   handleProfile: (action?: "open" | "close") => void;
   handleSidePanel: (action?: "open" | "close") => void;
   profileOpen: boolean;
   sidePanelOpen: boolean;
 };
 
-export const Layout = () => {
+export const InAppLayout = () => {
   const [sidePanelOpen, setSidePanelOpen] = useState(false);
   const [profileOpen, setProfileOpen] = useState(false);
 
@@ -81,7 +82,7 @@ export const Layout = () => {
               sidePanelOpen,
               handleProfile,
               handleSidePanel,
-            } satisfies LayoutContextType
+            } satisfies InAppLayoutContextType
           }
         />
       </div>

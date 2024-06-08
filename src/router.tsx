@@ -1,5 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
-import { Layout } from "./components/layout";
+import { InAppLayout } from "./components/layouts/in-app-layout";
 
 // pages
 import Dashboard from "./pages/Dashboard";
@@ -9,11 +9,13 @@ import Chat from "./pages/Chat";
 import Tasks from "./pages/shortcut/Tasks";
 import Reports from "./pages/shortcut/Reports";
 import Settings from "./pages/shortcut/Settings";
+import { AuthLayout } from "./components/layouts/auth-layout";
+import Login from "./pages/Login";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Layout />,
+    element: <InAppLayout />,
     children: [
       { index: true, element: <Dashboard /> },
       { path: "/overview", element: <Overview /> },
@@ -22,6 +24,15 @@ const router = createBrowserRouter([
       { path: "/tasks", element: <Tasks /> },
       { path: "/reports", element: <Reports /> },
       { path: "/settings", element: <Settings /> },
+    ],
+  },
+  {
+    element: <AuthLayout />,
+    children: [
+      {
+        path: "/login",
+        element: <Login />,
+      },
     ],
   },
 ]);
