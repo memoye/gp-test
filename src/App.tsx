@@ -1,11 +1,8 @@
-import { SidePanel } from "./components/side-panel";
+import { RouterProvider } from "react-router-dom";
+import router from "./router";
 
 function App() {
-  return (
-    <>
-      <SidePanel />
-    </>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;

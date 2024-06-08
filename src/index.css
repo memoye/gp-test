@@ -1,3 +1,38 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --color-foreground: 240deg 2% 10%;
+
+    --color-action: 226deg 52% 46%;
+
+    --color-primary: 227deg 70% 31%;
+    --color-primary-light: 244deg 64% 46%;
+    --color-primary-lighter: 239deg 76% 60%;
+    /* foreground: dim - 70% opacity, bright - 100% opacity  */
+
+    --color-card: 226deg 59% 39%;
+
+    --color-muted: 0 0 96%;
+    /*foreground dim - 70% opacity, extradim - 42% opacity */
+
+    --color-accent: 18deg 100% 57%;
+    --color-accent-light: 18deg 100% 70%;
+    --color-accent-lighter: 46deg 100% 94%;
+
+    --color-warning: 38deg 100% 50%;
+  }
+
+  .animated-underline {
+    @apply relative before:absolute before:-bottom-0.5 before:right-0 before:h-px before:w-0 before:bg-white before:transition-[width] before:duration-300 before:ease-out before:content-[''] group-hover:before:left-0 group-hover:before:right-0 group-hover:before:w-full;
+  }
+}
+
+@supports (-webkit-text-stroke: 1.2px black) {
+  .text-stroke {
+    -webkit-text-fill-color: inherit;
+    -webkit-text-stroke: 1.2px black;
+  }
+}
