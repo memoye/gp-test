@@ -1,17 +1,20 @@
 import { Link, useNavigate } from 'react-router-dom';
 import { GoogleIcon } from '../../assets/google-icon';
+import useAuth from '../../hooks/useAuth';
 
 export const LoginForm = () => {
   const navigate = useNavigate();
+  const {login} = useAuth()
 
   return (
     <form
       onSubmit={(e) => {
         e.preventDefault();
+        login()
         navigate('/');
       }}
     >
-      <p className="mb-4 flex flex-wrap items-center gap-2 font-medium text-foreground">
+      <p className="mb-4 flex flex-wrap items-center gap-2 text-xs font-medium text-foreground">
         Don&apos;t have an account yet?{' '}
         <Link className="group min-w-max font-medium text-action" to="signup">
           <span className="animated-underline before:bg-action">

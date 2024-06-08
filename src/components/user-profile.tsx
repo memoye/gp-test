@@ -18,7 +18,7 @@ export const UserProfile = ({
 }) => {
   return (
     <div
-      className={`max-mw-full relative top-0 z-[50] flex min-h-svh flex-col justify-between bg-muted py-4 max-lgr:transition-all max-xs:w-full md:min-w-[20rem] lg:bg-muted ${'max-top-0 max-lgr:fixed'} ${
+      className={`max-mw-full relative top-0 z-[50] flex min-h-dvh flex-col justify-between bg-muted py-4 max-lgr:transition-all max-xs:w-full md:min-w-[20rem] lg:bg-muted ${'max-top-0 max-lgr:fixed'} ${
         open ? 'max-lgr:right-0' : 'max-lgr:-right-full'
       }`}
     >
@@ -54,7 +54,7 @@ export const UserProfile = ({
 
         <div>
           <h3 className="mb-3 text-balance text-lg font-medium tracking-wider text-foreground">
-            German for beginners
+            Course progress
           </h3>
           <div className="space-y-2">
             <UserProgressCard

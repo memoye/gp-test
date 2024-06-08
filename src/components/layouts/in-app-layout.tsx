@@ -2,8 +2,9 @@ import { useState } from 'react';
 import { MenuIcon, SearchIcon } from 'lucide-react';
 
 import { SidePanel } from '../side-panel';
-import { Outlet } from 'react-router-dom';
+import { Navigate, Outlet } from 'react-router-dom';
 import { UserProfile } from '../user-profile';
+import useAuth from '../../hooks/useAuth';
 
 export type InAppLayoutContextType = {
   handleProfile: (action?: 'open' | 'close') => void;
@@ -15,6 +16,8 @@ export type InAppLayoutContextType = {
 export const InAppLayout = () => {
   const [sidePanelOpen, setSidePanelOpen] = useState(false);
   const [profileOpen, setProfileOpen] = useState(false);
+
+  const {isAuthenticated} = useAuth()
 
   function handleSidePanel(action?: 'open' | 'close') {
     switch (action) {
@@ -43,6 +46,8 @@ export const InAppLayout = () => {
         break;
     }
   }
+
+  if (!isAuthenticated) return <Navigate to="/login"/>
 
   return (
     <div className="md:flex">

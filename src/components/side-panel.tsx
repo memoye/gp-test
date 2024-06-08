@@ -17,7 +17,7 @@ export function SidePanel({
   return (
     <>
       <div
-        className={`max-top-0 z-50 flex min-h-svh w-fit flex-col justify-between bg-primary px-6 py-2 text-white max-md:fixed max-md:transition-all md:min-w-[17rem] lg:text-sm ${
+        className={`max-top-0 z-50 flex min-h-dvh w-fit flex-col justify-between bg-primary px-6 py-2 text-white max-md:fixed max-md:transition-all md:min-w-[17rem] lg:text-sm ${
           open ? 'max-md:left-0' : 'max-md:-left-full'
         }`}
       >
