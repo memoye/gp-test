@@ -1,5 +1,5 @@
-import { ChevronRight, Dot } from "lucide-react";
-import { CardContainer } from "../common/card-container";
+import { ChevronRight, Dot } from 'lucide-react';
+import { CardContainer } from '../common/card-container';
 
 type SmallCardProps = {
   title: string;
@@ -18,7 +18,7 @@ export const SmallCard = ({
     <CardContainer className="rounded-xl">
       <div className="flex items-center justify-between gap-4">
         {Icon && (
-          <div className="size-10 flex items-center justify-center p-2 rounded-full shadow-md shadow-foreground-lighter/20">
+          <div className="flex size-10 items-center justify-center rounded-full p-2 shadow-md shadow-foreground-lighter/20">
             <Icon className="text-card" />
           </div>
         )}

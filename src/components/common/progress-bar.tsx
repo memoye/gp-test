@@ -20,8 +20,8 @@ export const ProgressBar = ({
   return (
     <>
       <div
-        className={`w-full overflow-hidden  ${
-          !className?.split(" ").includes(" h-") && "h-1"
+        className={`w-full overflow-hidden ${
+          !className?.split(' ').includes('h-') && 'h-1'
         } ${className}`}
       >
         <div

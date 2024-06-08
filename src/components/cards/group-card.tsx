@@ -1,5 +1,5 @@
-import { BellIcon, ChevronRight } from "lucide-react";
-import { CardContainer } from "../common/card-container";
+import { BellIcon, ChevronRight } from 'lucide-react';
+import { CardContainer } from '../common/card-container';
 
 export const GroupCard = () => {
   return (
@@ -7,21 +7,21 @@ export const GroupCard = () => {
       <div className="flex items-start justify-between">
         <div className="space-y-2">
           <h2 className="font-medium text-foreground/90">Group info</h2>
-          <p className="text-foreground-lighter text-sm">
+          <p className="text-sm text-foreground-lighter">
             13 Students in the group
           </p>
         </div>
 
         <button>
-          <BellIcon className="text-foreground size-5" />
+          <BellIcon className="size-5 text-foreground" />
         </button>
       </div>
 
       <CardContainer className="bg-accent-light text-white">
         <div className="flex items-center justify-between">
           <div className="space-y-2 text-sm">
-            <h2 className="font-medium text-white tracking-wide">Group info</h2>
-            <p className="text-white/[0.42] text-pretty max-w-[200px]">
+            <h2 className="font-medium tracking-wide text-white">Group info</h2>
+            <p className="max-w-[200px] text-pretty text-white/[0.42]">
               4 students from your group online now
             </p>
           </div>
@@ -34,7 +34,7 @@ export const GroupCard = () => {
 
       <div className="space-y-2">
         <h2 className="font-medium text-foreground/90">Today&apos;s lesson</h2>
-        <p className="text-foreground-light text-sm">unit 6 - Article</p>
+        <p className="text-sm text-foreground-light">unit 6 - Article</p>
       </div>
     </CardContainer>
   );

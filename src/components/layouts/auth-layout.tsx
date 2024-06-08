@@ -1,8 +1,8 @@
-import { Outlet } from "react-router-dom";
+import { Outlet } from 'react-router-dom';
 
 export const AuthLayout = () => {
   return (
-    <div className="min-h-svh w-full grid items-center justify-center px-6 bg-primary">
+    <div className="grid min-h-svh w-full items-center justify-center bg-primary px-6">
       <Outlet />
     </div>
   );

@@ -1,5 +1,5 @@
-import { NavLink } from "react-router-dom";
-import { navItems, shortcutItems } from "../lib/data";
+import { NavLink } from 'react-router-dom';
+import { navItems, shortcutItems } from '../lib/data';
 
 export const Nav = () => {
   return (
@@ -7,14 +7,14 @@ export const Nav = () => {
       <ul className="space-y-2 lg:space-y-[0.5rem]">
         {navItems.map(({ icon, name, href, alerts }) => (
           <li
-            className="flex items-center text-white/70 justify-between"
+            className="flex items-center justify-between text-white/70"
             key={name}
           >
             <NavLink
               to={href}
               className={({ isActive }) =>
-                `flex group w-full justify-between items-center gap-3 ${
-                  isActive && "text-white"
+                `group flex w-full items-center justify-between gap-3 ${
+                  isActive && 'text-white'
                 }`
               }
             >
@@ -24,7 +24,7 @@ export const Nav = () => {
               </span>
 
               {alerts && (
-                <span className="flex items-center justify-center size-6 tracking-[0] leading-[0] pt-px pr-px font-medium rounded-full  bg-warning ">
+                <span className="flex size-6 items-center justify-center rounded-full bg-warning pr-px pt-px font-medium leading-[0] tracking-[0]">
                   {alerts}
                 </span>
               )}
@@ -34,7 +34,7 @@ export const Nav = () => {
       </ul>
 
       <div className="mt-4">
-        <h3 className="text-white/80 tracking-wider mb-1 text-stroke font-semibold">
+        <h3 className="text-stroke mb-1 font-semibold tracking-wider text-white/80">
           SHORTCUT
         </h3>
         <ul className="space-y-2 text-white/70 lg:space-y-[0.5rem]">
@@ -43,10 +43,10 @@ export const Nav = () => {
               <NavLink
                 to={href}
                 className={({ isActive }) =>
-                  `flex items-center gap-3 ${isActive && "text-white"}`
+                  `flex items-center gap-3 ${isActive && 'text-white'}`
                 }
               >
-                <img className="size-6 object-contain" src={icon} />{" "}
+                <img className="size-6 object-contain" src={icon} />{' '}
                 <span>{[name]}</span>
               </NavLink>
             </li>

@@ -1,5 +1,5 @@
-import { Link, useNavigate } from "react-router-dom";
-import { GoogleIcon } from "../../assets/google-icon";
+import { Link, useNavigate } from 'react-router-dom';
+import { GoogleIcon } from '../../assets/google-icon';
 
 export const LoginForm = () => {
   const navigate = useNavigate();
@@ -8,12 +8,12 @@ export const LoginForm = () => {
     <form
       onSubmit={(e) => {
         e.preventDefault();
-        navigate("/");
+        navigate('/');
       }}
     >
-      <p className="flex flex-wrap font-medium text-foreground gap-2 items-center mb-4">
-        Don&apos;t have an account yet?{" "}
-        <Link className="min-w-max group text-action font-medium" to="signup">
+      <p className="mb-4 flex flex-wrap items-center gap-2 font-medium text-foreground">
+        Don&apos;t have an account yet?{' '}
+        <Link className="group min-w-max font-medium text-action" to="signup">
           <span className="animated-underline before:bg-action">
             Create an account
           </span>
@@ -22,20 +22,20 @@ export const LoginForm = () => {
 
       <button
         type="button"
-        className="flex justify-center items-center gap-2 font-medium text-foreground/90 p-2 border w-full rounded-md"
+        className="flex w-full items-center justify-center gap-2 rounded-md border p-2 font-medium text-foreground/90"
       >
         <GoogleIcon /> <span>Sign up with Google</span>
       </button>
 
       <div>
-        <span className="my-4 flex items-center gap-3 font-medium text-foreground-lighter text-sm before:h-px before:flex-1 before:bg-foreground-lighter before:opacity-50 before:content-[''] after:h-px after:flex-1 after:bg-foreground-lighter after:opacity-50 after:content-['']">
+        <span className="my-4 flex items-center gap-3 text-sm font-medium text-foreground-lighter before:h-px before:flex-1 before:bg-foreground-lighter before:opacity-50 before:content-[''] after:h-px after:flex-1 after:bg-foreground-lighter after:opacity-50 after:content-['']">
           OR
         </span>
       </div>
 
       <div>
         <label
-          className="text-sm mb-1.5 inline-flex font-semibold text-foreground-light"
+          className="mb-1.5 inline-flex text-sm font-semibold text-foreground-light"
           htmlFor="username"
         >
           Username
@@ -43,14 +43,14 @@ export const LoginForm = () => {
         <br />
         <input
           type="text"
-          className="border bg-transparent w-full mb-1.5 p-2 focus-within:outline-primary"
+          className="mb-1.5 w-full border bg-transparent p-2 focus-within:outline-primary"
         />
       </div>
 
       <div>
-        <div className="text-sm mt-6 inline-flex items-center justify-between w-full mb-1.5 font-semibold text-foreground-light">
-          <label htmlFor="username">Password</label>{" "}
-          <Link className="text-action group" to="/password-recovery">
+        <div className="mb-1.5 mt-6 inline-flex w-full items-center justify-between text-sm font-semibold text-foreground-light">
+          <label htmlFor="username">Password</label>{' '}
+          <Link className="group text-action" to="/password-recovery">
             <span className="animated-underline before:bg-action">
               Remember me
             </span>
@@ -60,7 +60,7 @@ export const LoginForm = () => {
         <input
           type="password"
           id="password"
-          className="border bg-transparent w-full p-2 focus-within:outline-primary"
+          className="w-full border bg-transparent p-2 focus-within:outline-primary"
         />
       </div>
 
@@ -74,7 +74,7 @@ export const LoginForm = () => {
         </label>
       </div>
 
-      <button className="w-full mt-8 p-2 bg-primary rounded-md text-white font-medium ">
+      <button className="mt-8 w-full rounded-md bg-primary p-2 font-medium text-white">
         Login
       </button>
     </form>

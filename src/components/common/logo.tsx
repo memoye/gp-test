@@ -1,4 +1,4 @@
-import SVGComp, { SVGCompProps } from "./svg";
+import SVGComp, { SVGCompProps } from './svg';
 
 export default function Logo({
   color,

@@ -1,4 +1,4 @@
-import SVGComp, { SVGCompProps } from "../components/common/svg";
+import SVGComp, { SVGCompProps } from '../components/common/svg';
 
 export function GoogleIcon({
   color,

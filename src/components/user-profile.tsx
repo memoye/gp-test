@@ -4,10 +4,10 @@ import {
   Dot,
   NotebookTextIcon,
   PenIcon,
-} from "lucide-react";
-import { SetStateAction } from "react";
-import { CardContainer } from "./common/card-container";
-import { SmallCard } from "./cards/small-card";
+} from 'lucide-react';
+import { SetStateAction } from 'react';
+import { CardContainer } from './common/card-container';
+import { SmallCard } from './cards/small-card';
 
 export const UserProfile = ({
   open,
@@ -18,30 +18,30 @@ export const UserProfile = ({
 }) => {
   return (
     <div
-      className={`min-h-svh max-xs:w-full relative bg-muted lg:bg-muted z-[50] top-0 py-4 max-lgr:transition-all max-mw-full md:min-w-[20rem] flex flex-col justify-between ${"max-lgr:fixed max-top-0"} ${
-        open ? "max-lgr:right-0" : "max-lgr:-right-full"
+      className={`max-mw-full relative top-0 z-[50] flex min-h-svh flex-col justify-between bg-muted py-4 max-lgr:transition-all max-xs:w-full md:min-w-[20rem] lg:bg-muted ${'max-top-0 max-lgr:fixed'} ${
+        open ? 'max-lgr:right-0' : 'max-lgr:-right-full'
       }`}
     >
       {/* back button for mobile and tablet */}
       <button
-        className="absolute lg:hidden top-8 text-foreground left-6"
+        className="absolute left-6 top-8 text-foreground lg:hidden"
         onClick={() => setOpen(false)}
       >
         <ArrowLeftIcon />
       </button>
 
-      <div className="bg-muted space-y-6 pb-3 text-foreground lg:rounded-l-lg p-6">
-        <div className="relative size-12 mx-auto flex items-center justify-center">
+      <div className="space-y-6 bg-muted p-6 pb-3 text-foreground lg:rounded-l-lg">
+        <div className="relative mx-auto flex size-12 items-center justify-center">
           <img
-            className="w-full rounded-full aspect-square"
+            className="aspect-square w-full rounded-full"
             src="/images/user-wh.png"
           />
-          <button className="absolute -bottom-0.5 -right-1 flex items-center justify-center size-5 text-xs tracking-[0] leading-[0] border-2 border-muted font-medium rounded-full text-white bg-action ">
+          <button className="absolute -bottom-0.5 -right-1 flex size-5 items-center justify-center rounded-full border-2 border-muted bg-action text-xs font-medium leading-[0] tracking-[0] text-white">
             5
           </button>
         </div>
         <div className="text-center">
-          <h2 className="font-medium mt-4 mb-2 text-foreground-light">
+          <h2 className="mb-2 mt-4 font-medium text-foreground-light">
             Harrison Philips
           </h2>
           <p className="text-xs text-foreground-lighter">Business analyst</p>
@@ -53,7 +53,7 @@ export const UserProfile = ({
         />
 
         <div>
-          <h3 className="font-medium mb-3 text-foreground text-lg tracking-wider text-balance">
+          <h3 className="mb-3 text-balance text-lg font-medium tracking-wider text-foreground">
             German for beginners
           </h3>
           <div className="space-y-2">
@@ -112,7 +112,7 @@ function UserProgressCard({
         </p>
 
         <div
-          className="text-white size-8 flex items-center justify-center rounded-md "
+          className="flex size-8 items-center justify-center rounded-md text-white"
           style={{ backgroundColor: color }}
         >
           <Icon className="size-5" />
@@ -120,7 +120,7 @@ function UserProgressCard({
       </div>
 
       <div>
-        <h2 className="font-medium text-sm text-foreground">{title}</h2>
+        <h2 className="text-sm font-medium text-foreground">{title}</h2>
         <p className="text-xs text-foreground-lighter">{subtitle}</p>
       </div>
     </CardContainer>
