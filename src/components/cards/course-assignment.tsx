@@ -17,7 +17,7 @@ export default function CourseAssignment() {
       </div>
 
       <div className="">
-        <ul className="mt-4 flex -space-x-3 [&>li]:box-content [&>li]:size-7 [&>li]:rounded-full [&>li]:border-4 [&>li]:border-card">
+        <ul className="mt-1.5 flex -space-x-3 [&>li]:box-content [&>li]:size-7 [&>li]:rounded-full [&>li]:border-4 [&>li]:border-card">
           {students.map((avi, idx) => (
             <li
               key={idx}
