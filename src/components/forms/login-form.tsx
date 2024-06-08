@@ -11,9 +11,9 @@ export const LoginForm = () => {
         navigate("/");
       }}
     >
-      <p className="flex font-medium text-foreground gap-2 items-center mb-4">
+      <p className="flex flex-wrap font-medium text-foreground gap-2 items-center mb-4">
         Don&apos;t have an account yet?{" "}
-        <Link className="group text-action font-medium" to="signup">
+        <Link className="min-w-max group text-action font-medium" to="signup">
           <span className="animated-underline before:bg-action">
             Create an account
           </span>
